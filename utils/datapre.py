@@ -37,7 +37,7 @@ def format_wavscp(datas):
 
 def main(path, output_path, sp=' '):
     datas = sorted(read_file(path, sp=sp))
-    datas = [remove_empty(data) for data in datas]
+    # datas = [remove_empty(data) for data in datas] 
     utt2spk = format_utt2spk(datas)
     utt2spk = [[key, *utt2spk[key]] for key in utt2spk]
     spk2utt = format_spk2utt(datas)
